@@ -6,6 +6,7 @@
 //! ```
 //!
 //! Do not edit `src/main.rs`; the bugs are in the library files.
+use crate::item::Item;
 
 pub mod item;
 
@@ -28,5 +29,5 @@ pub fn show_item() -> String {
 /// assert_eq!(dw17::slot_label(&item), "[B4]");
 /// ```
 pub fn slot_label(item: &item::Item) -> String {
-    format!("[{}]", item.code)
+    format!("[{}]", item.code())
 }
